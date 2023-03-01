@@ -34,9 +34,9 @@ export function Header() {
                     </a>
                   </li>
                 ))}*/}
-                <li><a href="#" className={activeOption === "option1" ? "active" : ""} onClick={() => handleOptionClick("option1")}>Option 1</a></li>
-                <li><a href="#" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Option 2 </a></li>
-                <li><a href="#" className={activeOption === "option3" ? "active" : ""} onClick={() => handleOptionClick("option3")}>Option 3 </a></li>
+                <li><a href="https://www.facebook.com/ibpuertadelcielo" target="_blank" className={activeOption === "option1" ? "active" : ""} onClick={() => handleOptionClick("option1")}>Siguenos</a></li>
+                <li><a href="#" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Grupo de whatsapp</a></li>
+                <li><a href="#" className={activeOption === "option3" ? "active" : ""} onClick={() => handleOptionClick("option3")}>Reglas</a></li>
               </ul>
             </div>
             <div className="toggle" onClick={toggleMenu}></div>
@@ -53,9 +53,9 @@ export function Header() {
                     </a>
                   </li>
                 ))} */}
-                <li><a href="#" className={activeOption === "option1" ? "active" : ""} onClick={() => handleOptionClick("option1")}>Option 1</a></li>
-                <li><a href="#" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Option 2 </a></li>
-                <li><a href="#" className={activeOption === "option3" ? "active" : ""} onClick={() => handleOptionClick("option3")}>Option 3 </a></li>
+                <li><a href="https://www.facebook.com/ibpuertadelcielo" target="_blank" className={activeOption === "option1" ? "active" : ""} onClick={() => handleOptionClick("option1")}>Siguenos</a></li>
+                <li><a href="#" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Grupo de whatsapp</a></li>
+                <li><a href="#" className={activeOption === "option3" ? "active" : ""} onClick={() => handleOptionClick("option3")}>Reglas </a></li>
               </ul>
             </div>
             <div className="toggle togglePst" onClick={toggleMenu}></div>

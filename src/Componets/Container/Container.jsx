@@ -1,4 +1,6 @@
 import "./Container.css";
+import {Marcador} from '../../fetchingComponents/Marcador'
+import {Marcadorm} from '../../fetchingComponents/Marcadorm'
 export function Container() {
   return (
     <>
@@ -17,7 +19,7 @@ export function Container() {
               <span style={{ "--I": 7 }}>S</span>
               <span style={{ "--I": 8 }}> &#129333;</span>
             </div>
-            <span>01</span>
+            <Marcador/>
           </div>
 
           <div className="cont-girl-table num">
@@ -31,7 +33,7 @@ export function Container() {
               <span style={{ "--I": 7 }}>S</span>
               <span style={{ "--I": 8 }}> &#128590;</span>
             </div>
-            <span className="colorGirl">01</span>
+            <Marcadorm/>
           </div>
         </div>
         <div className="cont-svg">
