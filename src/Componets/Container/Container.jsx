@@ -1,6 +1,8 @@
 import "./Container.css";
 import {Marcador} from '../../fetchingComponents/Marcador'
 import {Marcadorm} from '../../fetchingComponents/Marcadorm'
+import { TablaH } from "../../fetchingComponents/TablaH";
+import { TablaM } from "../../fetchingComponents/TablaM";
 export function Container() {
   return (
     <>
@@ -295,9 +297,7 @@ export function Container() {
               </g>
             </svg>
             <div className="cont-Button">
-              <button className="button-man" type="button">
-                Ver Detalles
-              </button>
+            <TablaH/>
             </div>
           </div>
           <div className="cont-girl">
@@ -427,9 +427,7 @@ export function Container() {
               />
             </svg>
             <div className="cont-Button">
-              <button className="button-girl" type="button">
-                Ver Detalles
-              </button>
+              <TablaM/>
             </div>
           </div>
         </div>
