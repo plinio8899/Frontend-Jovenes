@@ -19,7 +19,6 @@ export function Marcador(){
             setTodos(variable)
         })
     }, [])
-    
     return(
         <span>{todos}</span>
     )
