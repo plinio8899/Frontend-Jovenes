@@ -95,6 +95,21 @@ object-fit: cover;
         margin:0px 0px 50px 0px;
     }
 }
+@media (max-width: 366px){
+    .cont-svg .cont-girl{
+        width:auto !important;
+    }
+    .cont-girl svg{
+        width:240px;
+    }
+    .cont-svg .cont-man{
+        width: auto;
+    }
+    .cont-man svg{
+        width:240px;
+    }
+}
+
 .cont-svg{
     position: relative;
     width: 100%;
