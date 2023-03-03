@@ -35,7 +35,7 @@ export function Header() {
                   </li>
                 ))}*/}
                 <li><a href="https://www.facebook.com/ibpuertadelcielo" target="_blank" className={activeOption === "option1" ? "active" : ""} onClick={() => handleOptionClick("option1")}>Siguenos</a></li>
-                <li><a href="#" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Grupo de whatsapp</a></li>
+                <li><a href="https://chat.whatsapp.com/ImgZBsoO6WDGvn4UeaS5eP" target="_blank" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Grupo de whatsapp</a></li>
                 <li><a href="#" className={activeOption === "option3" ? "active" : ""} onClick={() => handleOptionClick("option3")}>Reglas</a></li>
               </ul>
             </div>
@@ -54,7 +54,7 @@ export function Header() {
                   </li>
                 ))} */}
                 <li><a href="https://www.facebook.com/ibpuertadelcielo" target="_blank" className={activeOption === "option1" ? "active" : ""} onClick={() => handleOptionClick("option1")}>Siguenos</a></li>
-                <li><a href="#" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Grupo de whatsapp</a></li>
+                <li><a href="https://chat.whatsapp.com/ImgZBsoO6WDGvn4UeaS5eP" target="_blank" className={activeOption === "option2" ? "active" : ""} onClick={() => handleOptionClick("option2")}>Grupo de whatsapp</a></li>
                 <li><a href="#" className={activeOption === "option3" ? "active" : ""} onClick={() => handleOptionClick("option3")}>Reglas </a></li>
               </ul>
             </div>

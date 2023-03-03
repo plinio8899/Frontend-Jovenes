@@ -1,7 +1,33 @@
+import { useEffect, useState } from "react"
+
 export function TablaH(){
+
+    const url = "https://backend-ipc-jov.onrender.com/h-points/"
+    const [desc, setDesc] = useState(null)
+
+
+    useEffect(() =>{
+        fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            setDesc(data.data.reverse())
+        })
+    }, [])
+
     return(
-        <button className="button-man" type="button">
-        Ver Detalles
-        </button>
+        <>
+            <div>
+                {desc?.map((tabla) => (
+                    <>
+                    <table align="center" cellspacing="2" cellpadding="2" border="1" width="100%">
+                        <tr align="center">
+                            <td align="center" width="20%">{tabla.number}</td>
+                            <td align="center" rowspan="2" colspan="2" cellpadding="2">{tabla.description}</td>
+                        </tr>
+                    </table>
+                    </>))}
+            </div>
+        </>
+        
     )
 }
