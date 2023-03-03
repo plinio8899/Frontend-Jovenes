@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -10,22 +10,29 @@
 body {
     background: #fefefe;
 }
-body::-webkit-scrollbar {
+::selection {
+    background: #1F4C73;
+    color: #fff;
+}
+::-webkit-scrollbar {
     width: 7px;
     height: 1px;
-  }
-  body::-webkit-scrollbar-track {
-    background:#367FBF;        /* color of the tracking area */
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: #1F4C73;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-  /* creates padding around scroll thumb */
-  }
+}
+
+::-webkit-scrollbar-track {
+    background: #367FBF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1F4C73;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 990px) {
     .nav-links {
         display: none !important;
     }
+
     .nav-links-mobile {
         display: flex !important;
         position: fixed;
@@ -34,22 +41,25 @@ body::-webkit-scrollbar {
         height: 100vh;
         top: 0;
         left: 0;
-        z-index:1000;
+        z-index: 1000;
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(8px);
         justify-content: center;
         align-items: center;
     }
+
     .nav-links-mobile ul {
         list-style: none;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .nav-links-mobile ul li {
         margin: 25px 0;
         font-size: 1.2em;
     }
+
     .nav-links-mobile ul li a {
         color: #000;
         padding: 10px 25px;
@@ -57,21 +67,26 @@ body::-webkit-scrollbar {
         transition: 0.2s;
         text-decoration: none;
     }
+
     .nav-links-mobile ul li a:hover {
         color: #ffff;
         background: #3786A6;
     }
+
     .nav-links-mobile ul li a.active {
         color: #fff;
         background: #3786A6;
     }
+
     .mobile-menu {
         display: block;
     }
+
     .toggle {
         z-index: 1000 !important;
         display: flex !important;
     }
+
     .togglePst {
         position: fixed !important;
         right: 0px;
@@ -84,7 +99,7 @@ header {
     width: 100%;
     height: 100px;
     position: fixed;
-    z-index:4;
+    z-index: 4;
 }
 
 .navbar {
@@ -179,5 +194,3 @@ header {
     transform: translateY(6px);
     transition: 0.5s;
 }
-
-

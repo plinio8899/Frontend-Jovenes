@@ -17,17 +17,18 @@ export function TablaH(){
     return(
         <>
             <div>
+                <div className="tableTeam">
                 {desc?.map((tabla) => (
                     <>
-                    <table align="center" cellspacing="2" cellpadding="2" border="1" width="100%">
-                        <tr align="center">
-                            <td align="center" width="20%">{tabla.number}</td>
-                            <td align="center" rowspan="2" colspan="2" cellpadding="2">{tabla.description}</td>
+                    <table width="100%">
+                        <tr>
+                            <td style={{textAlign: "center"}} width="18%">{tabla.number}</td>
+                            <td>{tabla.description}</td>
                         </tr>
                     </table>
                     </>))}
+                    </div>
             </div>
         </>
-        
     )
 }
