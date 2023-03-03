@@ -1,13 +1,24 @@
 import "./Container.css";
-import {Marcador} from '../../fetchingComponents/Marcador'
-import {Marcadorm} from '../../fetchingComponents/Marcadorm'
+import { useState } from "react";
+import { Marcador } from "../../fetchingComponents/Marcador";
+import { Marcadorm } from "../../fetchingComponents/Marcadorm";
 import { TablaH } from "../../fetchingComponents/TablaH";
 import { TablaM } from "../../fetchingComponents/TablaM";
+
 export function Container() {
+  const [showTable, setShowTable] = useState(false);
+  function toggleTable() {
+    setShowTable(!showTable);
+  }
+
+  const [showTableH, setShowTableH] = useState(false);
+  function toggleTableH() {
+    setShowTableH(!showTableH);
+  }
   return (
     <>
       <div className="container">
-        <img src="../public/gender.png" alt="Logo Genero" />
+        <img src="../public/gender.png" draggable="false" onmousedown={(e) => e.preventDefault()} alt="Logo Genero" />
         <h2>A Cual Equipo Perteneces?👀</h2>
         <div className="cont-num">
           <div className="cont-man-table num">
@@ -21,7 +32,7 @@ export function Container() {
               <span style={{ "--I": 7 }}>S</span>
               <span style={{ "--I": 8 }}> &#129333;</span>
             </div>
-            <Marcador/>
+            <Marcador />
           </div>
 
           <div className="cont-girl-table num">
@@ -35,7 +46,7 @@ export function Container() {
               <span style={{ "--I": 7 }}>S</span>
               <span style={{ "--I": 8 }}> &#128590;</span>
             </div>
-            <Marcadorm/>
+            <Marcadorm />
           </div>
         </div>
         <div className="cont-svg">
@@ -297,11 +308,12 @@ export function Container() {
               </g>
             </svg>
             <div className="cont-Button">
-              <button className="button-man" type="button">
+              <button onClick={toggleTableH} className="button-man">
                 Ver Detalles
               </button>
             </div>
-              <TablaH/>
+            {showTableH && <TablaH />}
+            <div></div>
           </div>
           <div className="cont-girl">
             <svg
@@ -430,11 +442,12 @@ export function Container() {
               />
             </svg>
             <div className="cont-Button">
-            <button className="button-girl" type="button">
+              <button onClick={toggleTable} className="button-girl">
                 Ver Detalles
               </button>
             </div>
-              <TablaM/>
+            {showTable && <TablaM />}
+            <div></div>
           </div>
         </div>
       </div>
