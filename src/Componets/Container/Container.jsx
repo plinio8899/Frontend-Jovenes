@@ -297,8 +297,11 @@ export function Container() {
               </g>
             </svg>
             <div className="cont-Button">
-            <TablaH/>
+              <button className="button-man" type="button">
+                Ver Detalles
+              </button>
             </div>
+              <TablaH/>
           </div>
           <div className="cont-girl">
             <svg
@@ -427,8 +430,11 @@ export function Container() {
               />
             </svg>
             <div className="cont-Button">
-              <TablaM/>
+            <button className="button-girl" type="button">
+                Ver Detalles
+              </button>
             </div>
+              <TablaM/>
           </div>
         </div>
       </div>
