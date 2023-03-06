@@ -21,10 +21,12 @@ export function TablaH(){
                 {desc?.map((tabla) => (
                     <>
                     <table width="100%">
+                    <tbody>
                         <tr>
                             <td style={{textAlign: "center"}} width="18%">{tabla.number}</td>
                             <td>{tabla.description}</td>
                         </tr>
+                        </tbody>
                     </table>
                     </>))}
                     </div>

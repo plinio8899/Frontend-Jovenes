@@ -23,7 +23,7 @@ export function Header() {
         <header>
           <div className="navbar">
             <a href="" className="logo">
-              <img src="../public/Logo.jpg" draggable="false" onmousedown={(e) => e.preventDefault()} alt="Logo" />
+              <img src="../public/Logo.jpg" draggable="false" onMouseDown={(e) => e.preventDefault()} alt="Logo" />
             </a>
             <div className="nav-links">
               <ul>
