@@ -7,7 +7,7 @@ import { Marcador } from "../../fetchingComponents/Marcador";
 import { Marcadorm } from "../../fetchingComponents/Marcadorm";
 import { TablaH } from "../../fetchingComponents/TablaH";
 import { TablaM } from "../../fetchingComponents/TablaM";
-
+import image from '../../../public/gender.png';
 
 
 export function Container() {
@@ -24,7 +24,7 @@ export function Container() {
   return (
     <>
       <div className="container">
-        <img src="../public/gender.png" draggable="false" onMouseDown={(e) => e.preventDefault()} alt="Logo Genero" />
+        <img src={image} draggable="false" onMouseDown={(e) => e.preventDefault()} alt="Logo Genero" />
         <h2>A Cual Equipo Perteneces?👀</h2>
         <div className="cont-num">
           <div className="cont-man-table num">
