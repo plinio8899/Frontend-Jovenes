@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import '../Componets/Container/Container.css'
 
 export function Marcadorm(){
-    const url = "https://backend-ipc-jov.onrender.com/h-points/"
+    const url = "https://backend-ipc-jov.onrender.com/m-points/"
     const [todos, setTodos] = useState(0)
     const [loading, setLoading] = useState(true)
 
@@ -27,6 +27,6 @@ export function Marcadorm(){
     }
 
     return(
-        <span className="colorgirl">{todos}</span>
+        <span className="colorGirl">{todos}</span>
     )
 }
