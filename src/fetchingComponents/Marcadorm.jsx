@@ -1,9 +1,10 @@
 import {useEffect, useState} from 'react'
 import '../Componets/Container/Container.css'
 
-export function Marcadorm(){
-    const url = "https://backend-ipc-jov.onrender.com/m-points/"
+export function Marcador(){
+    const url = "https://backend-ipc-jov.onrender.com/h-points/"
     const [todos, setTodos] = useState(0)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() =>{
         let mas = 0
@@ -17,10 +18,15 @@ export function Marcadorm(){
             }         
             let variable = Math.floor(mas)
             setTodos(variable)
+            setLoading(false) // se actualiza el estado de loading a "false" cuando se obtienen los datos
         })
     }, [])
-    
+
+    if (loading) { // se muestra un mensaje de "loading" mientras se obtienen los datos
+        return <span>Cargando...</span>
+    }
+
     return(
-        <span className='colorGirl'>{todos}</span>
+        <span className="colorgirl">{todos}</span>
     )
 }
