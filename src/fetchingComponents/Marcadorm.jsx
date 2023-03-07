@@ -23,7 +23,7 @@ export function Marcadorm(){
     }, [])
 
     if (loading) { // se muestra un mensaje de "loading" mientras se obtienen los datos
-        return <span>Cargando...</span>
+        return <span className="colorGirl">Cargando...</span>
     }
 
     return(
