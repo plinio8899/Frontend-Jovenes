@@ -1,10 +1,14 @@
 import "./Container.css";
 import { useState } from "react";
+import Lottie from "lottie-react";
+import SvgMan from "../../svgs/man.json";
+import SvgGirl from "../../svgs/girl.json";
 import { Marcador } from "../../fetchingComponents/Marcador";
 import { Marcadorm } from "../../fetchingComponents/Marcadorm";
 import { TablaH } from "../../fetchingComponents/TablaH";
 import { TablaM } from "../../fetchingComponents/TablaM";
-import image from '../../../public/gender.png'
+import image from '../../../public/gender.png';
+
 
 export function Container() {
   const [showTable, setShowTable] = useState(false);
@@ -16,10 +20,11 @@ export function Container() {
   function toggleTableH() {
     setShowTableH(!showTableH);
   }
+
   return (
     <>
       <div className="container">
-        <img src={image} draggable="false" onmousedown={(e) => e.preventDefault()} alt="Logo Genero" />
+        <img src={image} draggable="false" onMouseDown={(e) => e.preventDefault()} alt="Logo Genero" />
         <h2>A Cual Equipo Perteneces?👀</h2>
         <div className="cont-num">
           <div className="cont-man-table num">
@@ -45,14 +50,15 @@ export function Container() {
               <span style={{ "--I": 5 }}>R</span>
               <span style={{ "--I": 6 }}>E</span>
               <span style={{ "--I": 7 }}>S</span>
-              <span style={{ "--I": 8 }}> &#128590;</span>
+              <span style={{ "--I": 8 }}> 👩‍💼</span>
             </div>
             <Marcadorm />
           </div>
         </div>
         <div className="cont-svg">
           <div className="cont-man">
-            <svg
+            <Lottie animationData={SvgMan} />
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="611.492"
               height="523.95294"
@@ -307,7 +313,7 @@ export function Container() {
                   fill="#e6e6e6"
                 />
               </g>
-            </svg>
+            </svg> */}
             <div className="cont-Button">
               <button onClick={toggleTableH} className="button-man">
                 Ver Detalles
@@ -317,7 +323,10 @@ export function Container() {
             <div></div>
           </div>
           <div className="cont-girl">
-            <svg
+            <div  style={{ width: "580px", height: "auto", position: "relative" }}>
+          <Lottie animationData={SvgGirl} />
+          </div>
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="642.99652"
               height="699.63874"
@@ -441,7 +450,7 @@ export function Container() {
                 height="347.99994"
                 fill="#3f3d56"
               />
-            </svg>
+            </svg> */}
             <div className="cont-Button">
               <button onClick={toggleTable} className="button-girl">
                 Ver Detalles

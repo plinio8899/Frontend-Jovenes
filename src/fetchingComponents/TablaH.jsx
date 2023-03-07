@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-
+import { useState, useEffect } from "react"
 export function TablaH(){
 
     const url = "https://backend-ipc-jov.onrender.com/h-points/"
@@ -21,10 +20,12 @@ export function TablaH(){
                 {desc?.map((tabla) => (
                     <>
                     <table width="100%">
+                    <tbody>
                         <tr>
                             <td style={{textAlign: "center"}} width="18%">{tabla.number}</td>
                             <td>{tabla.description}</td>
                         </tr>
+                        </tbody>
                     </table>
                     </>))}
                     </div>
@@ -32,3 +33,6 @@ export function TablaH(){
         </>
     )
 }
+
+
+
