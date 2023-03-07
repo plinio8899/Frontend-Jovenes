@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import '../Componets/Container/Container.css'
+import { Loading } from '../Componets/Loading/Loanding'
 
 export function Marcadorm(){
     const url = "https://backend-ipc-jov.onrender.com/m-points/"
@@ -23,7 +24,9 @@ export function Marcadorm(){
     }, [])
 
     if (loading) { // se muestra un mensaje de "loading" mientras se obtienen los datos
-        return <span className="colorGirl">Cargando...</span>
+        return (
+            <Loading/>
+        )
     }
 
     return(

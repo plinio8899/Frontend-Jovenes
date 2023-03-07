@@ -1,38 +1,46 @@
 import { useState, useEffect } from "react"
-export function TablaH(){
+import { Loading } from "../Componets/Loading/Loanding"
 
-    const url = "https://backend-ipc-jov.onrender.com/h-points/"
-    const [desc, setDesc] = useState(null)
+export function TablaH() {
 
+  const url = "https://backend-ipc-jov.onrender.com/h-points/"
+  const [desc, setDesc] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() =>{
-        fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-            setDesc(data.data.reverse())
-        })
-    }, [])
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setDesc(data.data.reverse())
+        setIsLoading(false)
+      })
+  }, [])
 
-    return(
-        <>
-            <div>
-                <div className="tableTeam">
-                {desc?.map((tabla) => (
-                    <>
-                    <table width="100%">
-                    <tbody>
-                        <tr>
-                            <td style={{textAlign: "center"}} width="18%">{tabla.number}</td>
-                            <td>{tabla.description}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    </>))}
-                    </div>
-            </div>
-        </>
-    )
+  return (
+    <>
+      {isLoading ? (
+        <Loading/>
+      ) : (
+        <div>
+          <div className="tableTeam">
+            {desc?.map((tabla) => (
+              <>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <td style={{ textAlign: "center" }} width="18%">
+                        {tabla.number}
+                      </td>
+                      <td>{tabla.description}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  )
 }
-
-
 

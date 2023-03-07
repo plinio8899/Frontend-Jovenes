@@ -1,16 +1,23 @@
 import { useState, useEffect } from "react"
+import { Loading } from "../Componets/Loading/Loanding"
 
 export function TablaM(){
     const url = "https://backend-ipc-jov.onrender.com/m-points/"
     const [desc, setDesc] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() =>{
         fetch(url)
         .then((res) => res.json())
         .then((data) => {
-                setDesc(data.data.reverse())
+            setDesc(data.data.reverse())
+            setLoading(false)
         })
     }, [])
+
+    if (loading) {
+        return <Loading/>
+    }
 
     return(
         <>
@@ -30,5 +37,3 @@ export function TablaM(){
             </>
         )
 }
-
-

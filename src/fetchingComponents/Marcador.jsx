@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import '../Componets/Container/Container.css'
+import { Loading } from '../Componets/Loading/Loanding'
 
 export function Marcador(){
     const url = "https://backend-ipc-jov.onrender.com/h-points/"
@@ -23,7 +24,9 @@ export function Marcador(){
     }, [])
 
     if (loading) { // se muestra un mensaje de "loading" mientras se obtienen los datos
-        return <span>Cargando...</span>
+        return (
+            <Loading/>
+        )
     }
 
     return(
