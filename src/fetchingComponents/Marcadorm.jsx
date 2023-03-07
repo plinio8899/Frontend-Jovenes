@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import '../Componets/Container/Container.css'
 
-export function Marcador(){
+export function Marcadorm(){
     const url = "https://backend-ipc-jov.onrender.com/h-points/"
     const [todos, setTodos] = useState(0)
     const [loading, setLoading] = useState(true)
