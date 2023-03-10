@@ -2,8 +2,8 @@ import {useEffect, useState} from 'react'
 import '../Componets/Container/Container.css'
 import { Loading } from '../Componets/Loading/Loanding'
 
-export function Marcador(){
-    const url = "https://backend-ipc-jov.onrender.com/h-points/"
+export function Marcador({ratio, clas}){
+    const url = `https://backend-ipc-jov.onrender.com/${ratio}-points`
     const [todos, setTodos] = useState(0)
     const [loading, setLoading] = useState(true)
 
@@ -30,6 +30,6 @@ export function Marcador(){
     }
 
     return(
-        <span>{todos}</span>
+        <span className={clas}>{todos}</span>
     )
 }

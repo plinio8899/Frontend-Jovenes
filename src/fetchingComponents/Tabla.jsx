@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { Loading } from "../Componets/Loading/Loanding"
 
-export function TablaH() {
+export function Tabla({ratio}) {
 
-  const url = "https://backend-ipc-jov.onrender.com/h-points/"
+  const url = `https://backend-ipc-jov.onrender.com/${ratio}-points/`
   const [desc, setDesc] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -28,7 +28,7 @@ export function TablaH() {
                 <table width="100%">
                   <tbody>
                     <tr>
-                      <td style={{ textAlign: "center" }} width="18%">
+                      <td style={{ textAlign: "center" }} width="18%" key={tabla.number}>
                         {tabla.number}
                       </td>
                       <td>{tabla.description}</td>
